@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1087907290247176164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Weekly150/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637255267963774852
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13,17 +31,37 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 8987821707342190069}
-  - {fileID: 3228097145916748780}
+  - {fileID: 1934249666783931148}
+  - {fileID: -1087907290247176164}
   EditorEvents:
   - {fileID: 9106185694817800553}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 3228097145916748780}
+  - {fileID: -1087907290247176164}
   StringsBanks:
-  - {fileID: 8987821707342190069}
-  stringsBankWriteTime: 637254039754924303
+  - {fileID: 1934249666783931148}
+  stringsBankWriteTime: 637255267963774852
   cacheVersion: 3
+--- !u!114 &1934249666783931148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Weekly150/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637255267963774852
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 740
+  Exists: 1
 --- !u!114 &3228097145916748780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41,7 +79,7 @@ MonoBehaviour:
   lastModified: 637254039754834544
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &8987821707342190069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,7 +99,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 740
-  Exists: 1
+  Exists: 0
 --- !u!114 &9106185694817800553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,7 +115,7 @@ MonoBehaviour:
   Path: event:/Test/New Event
   guid: cde220b1d4b6784f99e555af235ab0c7
   Banks:
-  - {fileID: 3228097145916748780}
+  - {fileID: -1087907290247176164}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
