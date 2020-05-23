@@ -22,4 +22,9 @@ public class EatHandler : MonoBehaviour
             }
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(_eatPosition.position, _eatRadius);
+    }
 }

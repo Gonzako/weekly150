@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.AI;
+using ScriptableObjectArchitecture;
+
 
 [RequireComponent(typeof(AIStateManager))]
 public class AIManager : MonoBehaviour
 {
 
     [SerializeField] public AISettings _settings;
+   
 
     private Dictionary<Type, BaseAIState> _initialStates;
     private AIStateManager _stateManager;
@@ -79,7 +82,6 @@ public class AIManager : MonoBehaviour
             UnityEngine.Random.Range(0.0F, _settings._wanderRadius));
         return result;
     }
-
 
     private void OnDrawGizmos()
     {
