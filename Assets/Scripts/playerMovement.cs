@@ -2,12 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ScriptableObjectArchitecture;
 
 public class playerMovement : MonoBehaviour
 {
     public float velocity = 10f;
     public Vector3 desiredVelocity { get; private set; }
 
+    public BoolVariable isPlayerWalking;
 
     private Camera cam;
     private Rigidbody rb;
@@ -34,6 +36,7 @@ public class playerMovement : MonoBehaviour
     private Vector3 GetInput()
     {
         Vector2 inputVect = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        isPlayerWalking.Value = inputVect != Vector2.zero;
         var desiredVel = cam.transform.forward;
         desiredVel.y = 0;
         desiredVel = desiredVel * inputVect.y;
