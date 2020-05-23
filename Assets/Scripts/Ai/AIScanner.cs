@@ -36,10 +36,6 @@ public class AIScanner : MonoBehaviour
 
     private void Start()
     {
-        viewMesh = new Mesh();
-        viewMesh.name = "ViewMesh";
-        viewMeshFilter.mesh = viewMesh;
-
         StartCoroutine(ScanForTargets(0.2F));
     }
 
@@ -92,7 +88,7 @@ public class AIScanner : MonoBehaviour
 
     private void LateUpdate()
     {
-        DrawFieldOfView();
+     
     }
 
     void DrawFieldOfView()
@@ -199,6 +195,12 @@ public class AIScanner : MonoBehaviour
         {
             return new ViewCastInfo(false, transform.position + dir * viewRadius, viewRadius, globalAngle);
         }
+    }
+    
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, _trackRadius);
     }
 
     public struct ViewCastInfo

@@ -24,7 +24,7 @@ public class FleeState : BaseAIState
 
     public override Type Tick()
     {
-        Transform[] targets = _ai.GetComponent<AIScanner>()._visibleTargets.ToArray();
+        Transform[] targets = _ai.GetComponent<AIScanner>()._targetsAtVicinity.ToArray();
         if (targets.Length == 0)
         {
             return typeof(WanderState);

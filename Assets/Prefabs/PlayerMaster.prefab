@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692811307}
-  m_LocalRotation: {x: -0.03773941, y: 0.047848236, z: 0.0018091295, w: 0.9981398}
+  m_LocalRotation: {x: -0.03773941, y: 0.047848288, z: 0.0018091314, w: 0.9981398}
   m_LocalPosition: {x: 30.00175, y: 31.149172, z: 61.817547}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 1847760037}
   - component: {fileID: 1847760036}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: GroundHoverParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5394,6 +5394,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 10
+  isPlayerWalking: {fileID: 11400000, guid: 38266463d696bd747abdd0882aff0088, type: 2}
+  animator: {fileID: 727814845}
 --- !u!1 &2271972349966122935
 GameObject:
   m_ObjectHideFlags: 0
@@ -5578,7 +5580,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2271972350158794938}
-  m_LocalRotation: {x: 0.007239208, y: -0.04788121, z: -0.0003468206, w: -0.9988268}
+  m_LocalRotation: {x: 0.0072391876, y: -0.047881175, z: -0.00034681938, w: -0.9988268}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5651,7 +5653,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2271972350766447394}
-  m_LocalRotation: {x: 0.043516744, y: -0.04783697, z: -0.0020860536, w: -0.99790466}
+  m_LocalRotation: {x: 0.043516744, y: -0.047837004, z: -0.002086063, w: -0.99790466}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5850,7 +5852,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2271972351220192832}
-  m_LocalRotation: {x: 0.019436574, y: -0.04787338, z: -0.0009315624, w: -0.9986639}
+  m_LocalRotation: {x: 0.019436574, y: -0.047873378, z: -0.00093156233, w: -0.9986639}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6068,6 +6070,8 @@ GameObject:
   - component: {fileID: 2928474423845977775}
   - component: {fileID: 109600701}
   - component: {fileID: 109600702}
+  - component: {fileID: 727814845}
+  - component: {fileID: 727814841}
   m_Layer: 0
   m_Name: VisualMaster
   m_TagString: Untagged
@@ -6143,17 +6147,49 @@ MonoBehaviour:
   bottom:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1847760037}
-        m_MethodName: Emit
+      - m_Target: {fileID: 727814841}
+        m_MethodName: emithoverPuff
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 20
+          m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!95 &727814845
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5965960016264107653}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3cfafd714d049b6469b1be50ede08cda, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &727814841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5965960016264107653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20dc540aa6bf6e8419bd93067a056661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverPuff: {fileID: 1847760037}
 --- !u!1001 &1902583031660562789
 PrefabInstance:
   m_ObjectHideFlags: 0

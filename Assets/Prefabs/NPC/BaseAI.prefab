@@ -412,7 +412,7 @@ MonoBehaviour:
     m_Bits: 0
   _visibleTargets:
   - {fileID: 0}
-  _trackRadius: 0
+  _trackRadius: 10
   _targetsAtVicinity: []
   viewMeshFilter: {fileID: 0}
   _meshResolution: 4

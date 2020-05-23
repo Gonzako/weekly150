@@ -30,6 +30,7 @@ public class AIManager : MonoBehaviour
         SetupStates();
 
         _rb = GetComponent<Rigidbody2D>();
+      
     }
 
     private void SetupStates()
@@ -47,6 +48,7 @@ public class AIManager : MonoBehaviour
     {
         while (true)
         {
+            yield return new WaitForSeconds(_settings._wanderMovementCycle);
             if (_agent.pathStatus == NavMeshPathStatus.PathComplete && _agent.velocity.magnitude == 0)
             {
                 Debug.Log("[AIMANAGER] (" + transform.name + "): Setting new flee destination");
@@ -73,12 +75,19 @@ public class AIManager : MonoBehaviour
         }
     }
 
-
     private Vector3 getRandomWorldPosition()
     {
         Vector3 result = new Vector3(UnityEngine.Random.Range(0.0F, _settings._wanderRadius), 0.0F, 
             UnityEngine.Random.Range(0.0F, _settings._wanderRadius));
         return result;
+    }
+
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, _settings._wanderRadius);
+        
+
     }
 }
 
