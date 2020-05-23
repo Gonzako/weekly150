@@ -11,8 +11,11 @@ public class playerMovement : MonoBehaviour
 
     public BoolVariable isPlayerWalking;
 
+    public Animator animator;
+
     private Camera cam;
     private Rigidbody rb;
+    private const string walkingVar = "IsPlayerWalking";
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +40,7 @@ public class playerMovement : MonoBehaviour
     {
         Vector2 inputVect = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         isPlayerWalking.Value = inputVect != Vector2.zero;
+        animator.SetBool(walkingVar,isPlayerWalking.Value);
         var desiredVel = cam.transform.forward;
         desiredVel.y = 0;
         desiredVel = desiredVel * inputVect.y;
