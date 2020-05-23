@@ -57,7 +57,6 @@ public class AIScanner : MonoBehaviour
     {
         _visibleTargets.Clear();
         Collider[] targets = Physics.OverlapSphere(transform.position, viewRadius, _targetMask);
-        Debug.Log(targets.Length);
         for (int i = 0; i < targets.Length; i++)
         {
             Transform target = targets[i].transform;

@@ -37,7 +37,8 @@ public class AIManager : MonoBehaviour
         _stateManager = GetComponent<AIStateManager>();
         _initialStates = new Dictionary<Type, BaseAIState>
         {
-            {typeof(WanderState), new WanderState(this)}
+            {typeof(WanderState), new WanderState(this)},
+            {typeof(FleeState), new FleeState(this)}
         };
         _stateManager.SetStates(_initialStates);
     }
