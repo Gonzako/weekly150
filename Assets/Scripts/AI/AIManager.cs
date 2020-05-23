@@ -16,8 +16,6 @@ public class AIManager : MonoBehaviour
     public Rigidbody2D _rb;
     public Transform _player;
 
-    
-
     private void OnEnable()
     {
         //_player = GameObject.FindGameObjectWithTag("Player").transform;
