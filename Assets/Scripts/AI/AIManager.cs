@@ -2,22 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.AI;
 
-
+[RequireComponent(typeof(AIStateManager))]
 public class AIManager : MonoBehaviour
 {
-    private Dictionary<Type, BaseAIState> _initialStates;
-    private AIStateManager _aistatemng;
-    public Rigidbody2D _rb;
+
     [SerializeField] public AISettings _settings;
 
+    private Dictionary<Type, BaseAIState> _initialStates;
+    private AIStateManager _stateManager;
+    private NavMeshAgent _agent;
+    public Rigidbody2D _rb;
     public Transform _player;
 
     
 
     private void OnEnable()
     {
-        _player = GameObject.FindGameObjectWithTag("Player").transform;
+        //_player = GameObject.FindGameObjectWithTag("Player").transform;
+        _agent = GetComponent<NavMeshAgent>();
         SetupStates();
     }
 
@@ -30,12 +34,50 @@ public class AIManager : MonoBehaviour
 
     private void SetupStates()
     {
-        _aistatemng = GetComponent<AIStateManager>();
+        _stateManager = GetComponent<AIStateManager>();
         _initialStates = new Dictionary<Type, BaseAIState>
         {
-            {typeof(ChaseState), new ChaseState(this)}
+            {typeof(WanderState), new WanderState(this)}
         };
-        _aistatemng.SetStates(_initialStates);
+        _stateManager.SetStates(_initialStates);
+    }
+
+    public IEnumerator Flee()
+    {
+        while (true)
+        {
+            if (_agent.pathStatus == NavMeshPathStatus.PathComplete && _agent.velocity.magnitude == 0)
+            {
+                Debug.Log("[AIMANAGER] (" + transform.name + "): Setting new flee destination");
+                var _possibleDestination = _player.transform.position + getRandomWorldPosition();
+                if (Vector3.Distance(transform.position, _possibleDestination) > 
+                    Vector3.Distance(transform.position,  _player.transform.position))
+                {
+                    _agent.SetDestination(_possibleDestination);
+                }
+            }
+        }
+    }
+
+    public IEnumerator Wander()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(_settings._wanderMovementCycle);
+            if(_agent.pathStatus == NavMeshPathStatus.PathComplete && _agent.velocity.magnitude == 0)
+            {
+                Debug.Log("[AIMANAGER] (" + transform.name + "): Setting new wander destination");
+                _agent.SetDestination(getRandomWorldPosition());
+            }
+        }
+    }
+
+
+    private Vector3 getRandomWorldPosition()
+    {
+        Vector3 result = new Vector3(UnityEngine.Random.Range(0.0F, _settings._wanderRadius), 0.0F, 
+            UnityEngine.Random.Range(0.0F, _settings._wanderRadius));
+        return result;
     }
 }
 
