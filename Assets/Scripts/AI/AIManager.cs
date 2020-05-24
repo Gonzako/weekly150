@@ -49,16 +49,13 @@ public class AIManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(_settings._wanderMovementCycle);
+
+            yield return new WaitForSeconds(_settings._fleeMovementCycle);
             if (_agent.pathStatus == NavMeshPathStatus.PathComplete && _agent.velocity.magnitude == 0)
             {
                 Debug.Log("[AIMANAGER] (" + transform.name + "): Setting new flee destination");
                 var _possibleDestination = _player.transform.position + getRandomWorldPosition();
-                if (Vector3.Distance(transform.position, _possibleDestination) > 
-                    Vector3.Distance(transform.position,  _player.transform.position))
-                {
-                    _agent.SetDestination(_possibleDestination);
-                }
+                _agent.SetDestination(_possibleDestination); 
             }
         }
     }

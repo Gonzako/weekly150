@@ -45,6 +45,7 @@ public class AIScanner : MonoBehaviour
         {
             yield return new WaitForSeconds(delay);
             FindVisibleTargets();
+            FindTargetsNearby();
        
         }
     }
@@ -70,6 +71,7 @@ public class AIScanner : MonoBehaviour
 
     private void FindTargetsNearby()
     {
+        _targetsAtVicinity.Clear();
        Collider[] targets = Physics.OverlapSphere(transform.position, _trackRadius, _targetMask);
        foreach(Collider target in targets)
         {

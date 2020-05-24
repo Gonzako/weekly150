@@ -15,11 +15,12 @@ public class KillCount : MonoBehaviour
     private void Start()
     {
         _text = GetComponent<TextMeshProUGUI>();
+        _killcount.Value = FindObjectsOfType<AIManager>().Length;
     }
 
     // Update is called once per frame
     void Update()
     {
-        _text.text = _killcount.Value.ToString();
+        _text.text = _killcount.Value.ToString("0");
     }
 }
