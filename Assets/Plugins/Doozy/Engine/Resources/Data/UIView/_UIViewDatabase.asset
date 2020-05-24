@@ -17,6 +17,8 @@ MonoBehaviour:
   - Custom
   - Example
   - General
+  - GameplayUI
   Categories:
   - {fileID: 11400000, guid: b01e98f4801f7124ba39e1dac4debf90, type: 2}
   - {fileID: 11400000, guid: bd8d5cbbe2b1dca44b4f3ed3b76f2d56, type: 2}
+  - {fileID: 11400000, guid: 6252e224d5bb5c342a29375111e9c60e, type: 2}
