@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     [Header("Events")]
     [SerializeField] private GameEvent onLevelFailure;
     [SerializeField] private GameEvent onLevelComplete;
-    [SerializeField] private GameEventListener CivilianKillListener;
+    [SerializeField] private GameObjectGameEventListener CivilianKillListener;
 
     [Header("Variables")]
     [SerializeField] private FloatReference _timer;
@@ -33,8 +33,8 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator GameCycle()
     {
-        yield return new WaitForSeconds(0.5F);
         while (true){
+            yield return new WaitForSeconds(0.5F);
             if (_timer.Value == 0)
             {
                 onLevelFailure.Raise();
@@ -48,8 +48,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void RemoveCivilianCount()
+    public void RemoveCivilianCount(GameObject ob)
     {
+        Debug.Log(ob.name);
         _eatableCivs.Value -= 1;
     }
 }

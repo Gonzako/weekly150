@@ -11,7 +11,7 @@ public class AIHealth : MonoBehaviour, IEatable
 
     public void Kill()
     {
-        onNPCKilled.Raise();
+        onNPCKilled.Raise(gameObject);
         onKilled?.Invoke(gameObject);
     }
 }
