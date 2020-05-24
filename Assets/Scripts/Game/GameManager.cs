@@ -44,6 +44,4 @@ public class GameManager : MonoBehaviour
     {
         _eatableCivs.Value -= 1;
     }
-
-
 }
