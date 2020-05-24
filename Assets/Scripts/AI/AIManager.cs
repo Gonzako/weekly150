@@ -54,7 +54,7 @@ public class AIManager : MonoBehaviour
             if (_agent.pathStatus == NavMeshPathStatus.PathComplete && _agent.velocity.magnitude == 0)
             {
                 Debug.Log("[AIMANAGER] (" + transform.name + "): Setting new flee destination");
-                var _possibleDestination = _player.transform.position + getRandomWorldPosition();
+                var _possibleDestination = _player.transform.position + getRandomWorldPosition(_settings._fleeRadius);
                 _agent.SetDestination(_possibleDestination); 
             }
         }
@@ -68,15 +68,18 @@ public class AIManager : MonoBehaviour
             if(_agent.pathStatus == NavMeshPathStatus.PathComplete && _agent.velocity.magnitude == 0)
             {
                 Debug.Log("[AIMANAGER] (" + transform.name + "): Setting new wander destination");
-                _agent.SetDestination(getRandomWorldPosition());
+                _agent.SetDestination(getRandomWorldPosition(_settings._wanderRadius));
             }
         }
     }
 
-    private Vector3 getRandomWorldPosition()
+    /*
+     * TODO: make function generic with radius.
+     */
+    private Vector3 getRandomWorldPosition(float radius)
     {
-        Vector3 result = new Vector3(UnityEngine.Random.Range(0.0F, _settings._wanderRadius), 0.0F, 
-            UnityEngine.Random.Range(0.0F, _settings._wanderRadius));
+        Vector3 result = new Vector3(UnityEngine.Random.Range(0.0F, radius), 0.0F, 
+            UnityEngine.Random.Range(0.0F, radius));
         return result;
     }
 

@@ -26,6 +26,9 @@ public class AISettings
     [Tooltip("How long should AI wait before fleeing to next position? (Seconds)")]
     [Range(0.0F, 60F)]
     [SerializeField] public float _fleeMovementCycle = 3F;
+    [Tooltip("How far can AI decide to wander of after every cycle?")]
+    [Range(0.0F, 200F)]
+    [SerializeField] public float _fleeRadius = 10F;
 
 
 }

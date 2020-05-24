@@ -150,6 +150,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8313208852694986215, guid: 5676e5b4fefe17b468791541e0a0424f,
+        type: 3}
+      propertyPath: _settings._fleeRadius
+      value: 10.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8313208852694986215, guid: 5676e5b4fefe17b468791541e0a0424f,
+        type: 3}
+      propertyPath: _settings._fleeSpeed
+      value: 15.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8313208852694986215, guid: 5676e5b4fefe17b468791541e0a0424f,
+        type: 3}
+      propertyPath: _settings._fleeMovementCycle
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 8313208852694986216, guid: 5676e5b4fefe17b468791541e0a0424f,
         type: 3}
       propertyPath: m_Name
