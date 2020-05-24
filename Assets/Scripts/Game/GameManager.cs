@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
 
     public void RemoveCivilianCount(GameObject ob)
     {
+        Debug.Log("GAME: " + ob);
         _eatableCivs.Value -= 1;
     }
 
