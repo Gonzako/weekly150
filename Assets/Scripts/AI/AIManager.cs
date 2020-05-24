@@ -47,42 +47,39 @@ public class AIManager : MonoBehaviour
 
     public IEnumerator Flee()
     {
-        _agent.speed = 7.0F;
-        _agent.autoBraking = false;
         while (true)
         {
             yield return new WaitForSeconds(_settings._wanderMovementCycle);
             if (_agent.pathStatus == NavMeshPathStatus.PathComplete && _agent.velocity.magnitude == 0)
             {
                 Debug.Log("[AIMANAGER] (" + transform.name + "): Setting new flee destination");
-                Vector3 possibleDestination = _player.transform.position + getRandomWorldPosition(_settings._fleeRadius);
-                Vector3 rs = new Vector3(possibleDestination.x, 0.0F, possibleDestination.y);
-                Debug.Log(possibleDestination);
-              _agent.SetDestination(rs);
-                
+                var _possibleDestination = _player.transform.position + getRandomWorldPosition();
+                if (Vector3.Distance(transform.position, _possibleDestination) > 
+                    Vector3.Distance(transform.position,  _player.transform.position))
+                {
+                    _agent.SetDestination(_possibleDestination);
+                }
             }
         }
     }
 
     public IEnumerator Wander()
     {
-        _agent.speed = 3.0F;
-        _agent.autoBraking = true;
         while (true)
         {
             yield return new WaitForSeconds(_settings._wanderMovementCycle);
             if(_agent.pathStatus == NavMeshPathStatus.PathComplete && _agent.velocity.magnitude == 0)
             {
                 Debug.Log("[AIMANAGER] (" + transform.name + "): Setting new wander destination");
-                _agent.SetDestination(getRandomWorldPosition(_settings._wanderRadius));
+                _agent.SetDestination(getRandomWorldPosition());
             }
         }
     }
 
-    private Vector3 getRandomWorldPosition(float radius)
+    private Vector3 getRandomWorldPosition()
     {
-        Vector3 result = new Vector3(UnityEngine.Random.Range(0.0F, radius), 0.0F, 
-            UnityEngine.Random.Range(0.0F, radius));
+        Vector3 result = new Vector3(UnityEngine.Random.Range(0.0F, _settings._wanderRadius), 0.0F, 
+            UnityEngine.Random.Range(0.0F, _settings._wanderRadius));
         return result;
     }
 

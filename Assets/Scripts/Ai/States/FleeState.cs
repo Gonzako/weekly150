@@ -8,27 +8,24 @@ public class FleeState : BaseAIState
     public FleeState(AIManager ai) : base(ai)
     {
         _ai = ai;
-        _scanner = _ai.GetComponent<AIScanner>();
     }
 
     public override AIManager _ai { get; set; }
 
-    private AIScanner _scanner;
-
     public override void OnStateEnter()
     {
-        Debug.Log("Enter Flee");
         _ai.StartCoroutine(_ai.Flee());
     }
 
     public override void OnStateExit()
     {
-        _ai.StopAllCoroutines();
+        _ai.StopCoroutine(_ai.Flee());
     }
 
     public override Type Tick()
     {
-        if(_scanner._targetsAtVicinity.Count <= 0)
+        Transform[] targets = _ai.GetComponent<AIScanner>()._targetsAtVicinity.ToArray();
+        if (targets.Length == 0)
         {
             return typeof(WanderState);
         }

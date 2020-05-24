@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     [Header("Events")]
     [SerializeField] private GameEvent onLevelFailure;
     [SerializeField] private GameEvent onLevelComplete;
-    [SerializeField] private GameObjectGameEventListener CivilianKillListener;
+    [SerializeField] private GameEventListener CivilianKillListener;
 
     [Header("Variables")]
     [SerializeField] private FloatReference _timer;
@@ -19,38 +19,31 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float _levelCompletionTime;
 
  
+
     private void Start()
     {
         _eatableCivs.Value = FindObjectsOfType<AIManager>().Length;
         _timer.Value = _levelCompletionTime;
-        StartCoroutine(GameCycle());
     }
 
     private void Update()
     {
         _timer.Value -= Time.smoothDeltaTime;
-    }
 
-    private IEnumerator GameCycle()
-    {
-        while (true){
-            yield return new WaitForSeconds(0.5F);
-            if (_timer.Value == 0)
-            {
-                onLevelFailure.Raise();
-                StopAllCoroutines();
-            }
-            if (_eatableCivs.Value == 0)
-            {
-                onLevelComplete.Raise();
-                StopAllCoroutines();
-            }
+        if(_timer.Value == 0)
+        {
+            onLevelFailure.Raise();
+        }
+        if(_eatableCivs.Value == 0)
+        {
+            onLevelComplete.Raise();
         }
     }
 
-    public void RemoveCivilianCount(GameObject ob)
+    public void RemoveCivilianCount()
     {
-        Debug.Log(ob.name);
         _eatableCivs.Value -= 1;
     }
+
+
 }

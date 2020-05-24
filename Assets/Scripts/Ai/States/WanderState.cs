@@ -8,11 +8,10 @@ public class WanderState : BaseAIState
     public WanderState(AIManager ai) : base(ai)
     {
         _ai = ai;
-        _scanner = _ai.GetComponent<AIScanner>();
     }
 
     public override AIManager _ai { get; set; }
-    private AIScanner _scanner;
+
     public override void OnStateEnter()
     {
         _ai.StartCoroutine(_ai.Wander());
@@ -20,14 +19,13 @@ public class WanderState : BaseAIState
 
     public override void OnStateExit()
     {
-        _ai.StopAllCoroutines();
+        _ai.StopCoroutine(_ai.Wander());
     }
 
     public override Type Tick()
     {
-        
-        Debug.Log(_scanner._visibleTargets.Count);
-        if(_scanner._visibleTargets.Count >= 1)
+        Transform[] targets = _ai.GetComponent<AIScanner>()._visibleTargets.ToArray();
+        if(targets.Length > 0)
         {
             return typeof(FleeState);
         }

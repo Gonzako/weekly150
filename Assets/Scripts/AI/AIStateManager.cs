@@ -51,6 +51,6 @@ public class AIStateManager : MonoBehaviour
         _currentState = _availableStates[nextstate];
         onStateChanged?.Invoke(_currentState);
         _currentState?.OnStateEnter();
-        Debug.Log("State Changed To: " + _currentState.ToString());
+        Debug.Log("Game State Changed To: " + _currentState.ToString());
     }
 }

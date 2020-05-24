@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61f5bf7fd976bb142aca9af402f46e44, type: 3}
   m_Name: onNPCKilled
   m_EditorClassIdentifier: 
-  _debugValue: {fileID: 8313208852694986216, guid: 5676e5b4fefe17b468791541e0a0424f,
-    type: 3}
+  _debugValue: {fileID: 0}
