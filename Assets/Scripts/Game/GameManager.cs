@@ -19,24 +19,32 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float _levelCompletionTime;
 
  
-
     private void Start()
     {
         _eatableCivs.Value = FindObjectsOfType<AIManager>().Length;
         _timer.Value = _levelCompletionTime;
+        StartCoroutine(GameCycle());
     }
 
     private void Update()
     {
         _timer.Value -= Time.smoothDeltaTime;
+    }
 
-        if(_timer.Value == 0)
-        {
-            onLevelFailure.Raise();
-        }
-        if(_eatableCivs.Value == 0)
-        {
-            onLevelComplete.Raise();
+    private IEnumerator GameCycle()
+    {
+        yield return new WaitForSeconds(0.5F);
+        while (true){
+            if (_timer.Value == 0)
+            {
+                onLevelFailure.Raise();
+                StopAllCoroutines();
+            }
+            if (_eatableCivs.Value == 0)
+            {
+                onLevelComplete.Raise();
+                StopAllCoroutines();
+            }
         }
     }
 
