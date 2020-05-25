@@ -73,9 +73,7 @@ public class AIManager : MonoBehaviour
         }
     }
 
-    /*
-     * TODO: make function generic with radius.
-     */
+   
     private Vector3 getRandomWorldPosition(float radius)
     {
         Vector3 result = new Vector3(UnityEngine.Random.Range(0.0F, radius), 0.0F, 

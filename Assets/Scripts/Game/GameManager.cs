@@ -20,25 +20,28 @@ public class GameManager : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private float _levelCompletionTime;
 
- 
+
+    private void Awake()
+    {
+        _timer.Value = _levelCompletionTime;
+    }
 
     private void Start()
     {
         _eatableCivs.Value = FindObjectsOfType<AIManager>().Length;
-        _timer.Value = _levelCompletionTime;
     }
 
     private void Update()
     {
         _timer.Value -= Time.smoothDeltaTime;
 
-        if(_timer.Value == 0)
+        if(_timer.Value >= 0F)
         {
             onLevelFailure.Raise();
             _canMove.Value = false;
             _cursorEnabled.Value = true;
         }
-        if(_eatableCivs.Value == 0)
+        if(_eatableCivs.Value == 0F)
         {
             onLevelComplete.Raise();
             _canMove.Value = false;
