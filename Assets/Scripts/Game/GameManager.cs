@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     {
         _timer.Value -= Time.smoothDeltaTime;
 
-        if(_timer.Value >= 0F)
+        if(_timer.Value <= 0F)
         {
             onLevelFailure.Raise();
             _canMove.Value = false;

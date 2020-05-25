@@ -19,7 +19,6 @@ public class ControlManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         playerMovement = GetComponent<playerMovement>();
         MovementCheck();
         CursorCheck();
@@ -39,7 +38,9 @@ public class ControlManager : MonoBehaviour
         if (!_cursorEnabled.Value)
         {
             Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }else
             Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Locked;
     }
 }

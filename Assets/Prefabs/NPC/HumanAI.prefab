@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: onKilled.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
+    - target: {fileID: 465462977, guid: 5676e5b4fefe17b468791541e0a0424f, type: 3}
+      propertyPath: m_Center.y
+      value: 1.09
+      objectReference: {fileID: 0}
     - target: {fileID: 2161139411202559967, guid: 5676e5b4fefe17b468791541e0a0424f,
         type: 3}
       propertyPath: m_IsActive
