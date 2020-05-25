@@ -33,4 +33,9 @@ public class SceneSwitchManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public bool isLastLevel()
+    {
+        return (SceneManager.GetActiveScene().buildIndex == SceneManager.sceneCount);
+    }
 }

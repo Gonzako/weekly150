@@ -10152,6 +10152,18 @@ PrefabInstance:
       propertyPath: onKilled.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
+    - target: {fileID: 465462971, guid: 5676e5b4fefe17b468791541e0a0424f, type: 3}
+      propertyPath: onKilled.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 465462971, guid: 5676e5b4fefe17b468791541e0a0424f, type: 3}
+      propertyPath: onKilled.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 465462971, guid: 5676e5b4fefe17b468791541e0a0424f, type: 3}
+      propertyPath: onKilled.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 465462977, guid: 5676e5b4fefe17b468791541e0a0424f, type: 3}
       propertyPath: m_Center.y
       value: 0.98

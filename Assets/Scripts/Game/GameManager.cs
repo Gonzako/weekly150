@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     [Header("Events")]
     [SerializeField] private GameEvent onLevelFailure;
     [SerializeField] private GameEvent onLevelComplete;
-    [SerializeField] private GameEventListener CivilianKillListener;
+    [SerializeField] private GameEvent onGameComplete;
 
     [Header("Variables")]
     [SerializeField] private FloatReference _timer;
@@ -40,6 +40,10 @@ public class GameManager : MonoBehaviour
             onLevelFailure.Raise();
             _canMove.Value = false;
             _cursorEnabled.Value = true;
+            if (SceneSwitchManager._instance.isLastLevel())
+            {
+                onGameComplete.Raise();
+            }
         }
         if(_eatableCivs.Value == 0F)
         {
