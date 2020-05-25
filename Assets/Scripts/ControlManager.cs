@@ -9,6 +9,8 @@ public class ControlManager : MonoBehaviour
     [SerializeField] private BoolReference _canMove;
     [SerializeField] private BoolReference _cursorEnabled;
 
+    playerMovement playerMovement;
+
     private void Start()
     {
         _canMove.Value = true;
@@ -17,6 +19,8 @@ public class ControlManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        playerMovement = GetComponent<playerMovement>();
         MovementCheck();
         CursorCheck();
     }
@@ -25,9 +29,9 @@ public class ControlManager : MonoBehaviour
     {
         if (!_canMove.Value)
         {
-            GetComponent<playerMovement>().enabled = false;
+            playerMovement.enabled = false;
         }else
-            GetComponent<playerMovement>().enabled = true;
+            playerMovement.enabled = true;
     }
 
     private void CursorCheck()

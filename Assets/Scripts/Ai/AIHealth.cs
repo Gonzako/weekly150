@@ -9,9 +9,15 @@ public class AIHealth : MonoBehaviour, IEatable
     [SerializeField] private GameObjectGameEvent onNPCKilled;
     [SerializeField] private GameObjectEvent onKilled;
 
+    private bool killed = false;
+
     public void Kill()
     {
-        onKilled?.Invoke(gameObject);
-        onNPCKilled.Raise(gameObject);
+        if (!killed)
+        {
+            killed = true;
+            onKilled?.Invoke(gameObject);
+            onNPCKilled.Raise(gameObject);
+        }
     }
 }

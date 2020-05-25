@@ -13,7 +13,7 @@ public class EatHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(_eatKey))
+        if (true/*Input.GetKeyDown(_eatKey)*/)
         {
             Collider[] eatableTargets = Physics.OverlapSphere(_eatPosition.position, _eatRadius, _eatable);
             if(eatableTargets.Length > 0)
