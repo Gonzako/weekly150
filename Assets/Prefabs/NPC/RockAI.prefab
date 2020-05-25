@@ -15,6 +15,18 @@ PrefabInstance:
       propertyPath: onKilled.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
+    - target: {fileID: 465462971, guid: 5676e5b4fefe17b468791541e0a0424f, type: 3}
+      propertyPath: onKilled.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 3452204240926396221}
+    - target: {fileID: 465462971, guid: 5676e5b4fefe17b468791541e0a0424f, type: 3}
+      propertyPath: onKilled.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 465462971, guid: 5676e5b4fefe17b468791541e0a0424f, type: 3}
+      propertyPath: onKilled.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 465462977, guid: 5676e5b4fefe17b468791541e0a0424f, type: 3}
       propertyPath: m_Center.y
       value: 0.95
@@ -84,6 +96,12 @@ PrefabInstance:
 --- !u!4 &6680740535976685627 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8313208852694986211, guid: 5676e5b4fefe17b468791541e0a0424f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3452204239373540824}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &3452204240926396221 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1668731621, guid: 5676e5b4fefe17b468791541e0a0424f,
     type: 3}
   m_PrefabInstance: {fileID: 3452204239373540824}
   m_PrefabAsset: {fileID: 0}

@@ -15,9 +15,25 @@ PrefabInstance:
       propertyPath: onKilled.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
+    - target: {fileID: 465462971, guid: 5676e5b4fefe17b468791541e0a0424f, type: 3}
+      propertyPath: onKilled.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 1239140945763471914}
+    - target: {fileID: 465462971, guid: 5676e5b4fefe17b468791541e0a0424f, type: 3}
+      propertyPath: onKilled.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 465462971, guid: 5676e5b4fefe17b468791541e0a0424f, type: 3}
+      propertyPath: onKilled.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 465462977, guid: 5676e5b4fefe17b468791541e0a0424f, type: 3}
       propertyPath: m_Center.y
-      value: 1.09
+      value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 465462977, guid: 5676e5b4fefe17b468791541e0a0424f, type: 3}
+      propertyPath: m_Radius
+      value: 1.12
       objectReference: {fileID: 0}
     - target: {fileID: 2161139411202559967, guid: 5676e5b4fefe17b468791541e0a0424f,
         type: 3}
@@ -27,7 +43,7 @@ PrefabInstance:
     - target: {fileID: 8313208852694986211, guid: 5676e5b4fefe17b468791541e0a0424f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 19.19349
       objectReference: {fileID: 0}
     - target: {fileID: 8313208852694986211, guid: 5676e5b4fefe17b468791541e0a0424f,
         type: 3}
@@ -37,7 +53,7 @@ PrefabInstance:
     - target: {fileID: 8313208852694986211, guid: 5676e5b4fefe17b468791541e0a0424f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 10.302157
       objectReference: {fileID: 0}
     - target: {fileID: 8313208852694986211, guid: 5676e5b4fefe17b468791541e0a0424f,
         type: 3}
@@ -95,6 +111,12 @@ GameObject:
 --- !u!4 &7092082509779643692 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8313208852694986211, guid: 5676e5b4fefe17b468791541e0a0424f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1239140944132522191}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1239140945763471914 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1668731621, guid: 5676e5b4fefe17b468791541e0a0424f,
     type: 3}
   m_PrefabInstance: {fileID: 1239140944132522191}
   m_PrefabAsset: {fileID: 0}
