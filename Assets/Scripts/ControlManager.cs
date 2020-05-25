@@ -41,6 +41,6 @@ public class ControlManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
         }else
             Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.lockState = CursorLockMode.None;
     }
 }
