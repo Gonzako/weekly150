@@ -8,8 +8,6 @@ public class KillCount : MonoBehaviour
 {
 
     [SerializeField] private FloatReference _killcount;
-
-
     [SerializeField] private TextMeshProUGUI _text;
 
     private void Start()

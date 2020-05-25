@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     [Header("Variables")]
     [SerializeField] private FloatReference _timer;
     [SerializeField] private FloatReference _eatableCivs;
+    [SerializeField] private BoolReference _canMove;
+    [SerializeField] private BoolReference _cursorEnabled;
 
     [Header("Settings")]
     [SerializeField] private float _levelCompletionTime;
@@ -33,10 +35,14 @@ public class GameManager : MonoBehaviour
         if(_timer.Value == 0)
         {
             onLevelFailure.Raise();
+            _canMove.Value = false;
+            _cursorEnabled.Value = true;
         }
         if(_eatableCivs.Value == 0)
         {
             onLevelComplete.Raise();
+            _canMove.Value = false;
+            _cursorEnabled.Value = true;
         }
     }
 

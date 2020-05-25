@@ -4842,6 +4842,7 @@ MonoBehaviour:
     _wanderSpeed: 0
     _fleeSpeed: 0
     _fleeMovementCycle: 3
+    _fleeRadius: 10
   _rb: {fileID: 0}
   _player: {fileID: 0}
 --- !u!114 &8313208852694986214
