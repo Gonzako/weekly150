@@ -90,7 +90,7 @@ public class AIScanner : MonoBehaviour
 
     private void LateUpdate()
     {
-     
+        DrawVision();
     }
 
     void DrawFieldOfView()
@@ -153,6 +153,44 @@ public class AIScanner : MonoBehaviour
         viewMesh.RecalculateNormals();
     }
 
+
+    private void DrawVision()
+    {
+        int stepCount = Mathf.RoundToInt(viewAngle * _meshResolution);
+        float stepAngleSize = viewAngle / stepCount;
+        List<Vector3> viewPoints = new List<Vector3>();
+
+        ViewCastInfo oldViewCast = new ViewCastInfo();
+
+        for (int i = 0; i <= stepCount; i++)
+        {
+            float angle = transform.eulerAngles.y - viewAngle / 2 + stepAngleSize * i;
+
+            Debug.DrawLine(transform.position, transform.position + DirFromAngle(angle, true) * viewRadius, Color.red);
+            ViewCastInfo newViewCast = ViewCast(angle);
+            viewPoints.Add(newViewCast.point);
+
+            if (i > 0)
+            {
+                bool edgeDistThresholdExceeded = Mathf.Abs(oldViewCast.dist - newViewCast.dist) > edgeDistanceThreshold;
+                if (oldViewCast.hit != newViewCast.hit || (oldViewCast.hit && newViewCast.hit && edgeDistThresholdExceeded))
+                {
+                    EdgeInfo edge = FindEdge(oldViewCast, newViewCast);
+
+                    if (edge.pointA != Vector3.zero)
+                    {
+                        viewPoints.Add(edge.pointA);
+                    }
+                    if (edge.pointB != Vector3.zero)
+                    {
+                        viewPoints.Add(edge.pointB);
+                    }
+                }
+            }
+
+            oldViewCast = newViewCast;
+        }
+    }
     EdgeInfo FindEdge(ViewCastInfo minViewCast, ViewCastInfo maxViewCast)
     {
         float minAngle = minViewCast.angle;

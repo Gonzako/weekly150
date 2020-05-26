@@ -43,4 +43,9 @@ public class ControlManager : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
     }
+
+    public void CursorState(bool state)
+    {
+        _cursorEnabled.Value = state;
+    }
 }

@@ -1,20 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ScriptableObjectArchitecture;
 
 public class systemFuncsExposer : MonoBehaviour
 {
-    public bool isGamePaused;
-
-    public void pauseGame()
+    [SerializeField] public BoolReference isGamePaused;
+    [SerializeField] public GameEvent onPause;
+ 
+    public void PauseGame()
     {
         Time.timeScale = 0;
-        isGamePaused = true;
+        isGamePaused.Value = true;
+        onPause.Raise();
     }
 
-    public void resumeGame()
+    public void ResumeGame()
     {
         Time.timeScale = 1;
-        isGamePaused = false;
+        isGamePaused.Value = false;
+        onPause.Raise();
     }
 }

@@ -31,6 +31,7 @@ public class FleeState : BaseAIState
         {
             return typeof(WanderState);
         }
+        else 
         return null;
     }
 }

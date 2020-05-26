@@ -4891,7 +4891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575c3253d28164c41b0ecd6ca09a92a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 8.2
+  viewRadius: 12.6
   viewAngle: 85
   _targetMask:
     serializedVersion: 2
@@ -4901,7 +4901,7 @@ MonoBehaviour:
     m_Bits: 0
   _visibleTargets:
   - {fileID: 0}
-  _trackRadius: 10
+  _trackRadius: 25.1
   _targetsAtVicinity: []
   viewMeshFilter: {fileID: 0}
   _meshResolution: 4

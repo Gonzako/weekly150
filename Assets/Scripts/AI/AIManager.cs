@@ -31,6 +31,7 @@ public class AIManager : MonoBehaviour
         SetupStates();
 
         _rb = GetComponent<Rigidbody2D>();
+        _player = FindObjectOfType<playerMovement>().transform;
       
     }
 
@@ -47,9 +48,11 @@ public class AIManager : MonoBehaviour
 
     public IEnumerator Flee()
     {
+        _agent.speed = _settings._fleeSpeed;
+        _agent.autoBraking = false;
         while (true)
         {
-
+            
             yield return new WaitForSeconds(_settings._fleeMovementCycle);
             if (_agent.pathStatus == NavMeshPathStatus.PathComplete && _agent.velocity.magnitude == 0)
             {
@@ -62,6 +65,8 @@ public class AIManager : MonoBehaviour
 
     public IEnumerator Wander()
     {
+        _agent.speed = _settings._wanderSpeed;
+        _agent.autoBraking = true;
         while (true)
         {
             yield return new WaitForSeconds(_settings._wanderMovementCycle);
