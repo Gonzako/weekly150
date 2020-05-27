@@ -88,8 +88,7 @@ public class AIManager : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, _settings._wanderRadius);
-        Gizmos.
-
+        
     }
 }
 
