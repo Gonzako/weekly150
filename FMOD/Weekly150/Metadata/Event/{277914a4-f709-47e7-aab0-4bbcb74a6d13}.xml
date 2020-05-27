@@ -308,7 +308,7 @@
 			<value>0</value>
 		</property>
 		<property name="maximumDistance">
-			<value>60</value>
+			<value>850</value>
 		</property>
 	</object>
 	<object class="AutomationCurve" id="{4919a147-5ba8-4a0e-860f-8ac924a74b26}">
@@ -342,7 +342,7 @@
 	</object>
 	<object class="AutomationPoint" id="{bb97f186-1514-4b8f-a566-b375d16ee5ef}">
 		<property name="position">
-			<value>7</value>
+			<value>14</value>
 		</property>
 		<property name="value">
 			<value>-80</value>
@@ -350,10 +350,10 @@
 	</object>
 	<object class="AutomationPoint" id="{b6c48efc-7901-451a-9aed-a474a849f179}">
 		<property name="position">
-			<value>3</value>
+			<value>6</value>
 		</property>
 		<property name="value">
-			<value>-15</value>
+			<value>0</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{4f41ec9e-2943-4b47-8175-4418e5d30497}">
@@ -369,7 +369,7 @@
 			<value>20</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>-4</value>
 		</property>
 	</object>
 </objects>
