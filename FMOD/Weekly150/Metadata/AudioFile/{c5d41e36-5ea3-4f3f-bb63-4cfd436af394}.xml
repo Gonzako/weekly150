@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{c5d41e36-5ea3-4f3f-bb63-4cfd436af394}">
+		<property name="assetPath">
+			<value>Enemies/eat_enemy.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>2.0703541666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ba6c609f-a79b-4e8a-be38-25570d161eb5}</destination>
+		</relationship>
+	</object>
+</objects>
