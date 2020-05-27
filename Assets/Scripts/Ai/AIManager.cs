@@ -54,11 +54,11 @@ public class AIManager : MonoBehaviour
         {
             
             yield return new WaitForSeconds(_settings._fleeMovementCycle);
-            if (_agent.pathStatus == NavMeshPathStatus.PathComplete)
+            if (_agent.pathStatus == NavMeshPathStatus.PathComplete && _agent.velocity.magnitude == 0)
             {
-                Vector3 dirtoplayer = transform.position - _player.transform.position;
                 Debug.Log("[AIMANAGER] (" + transform.name + "): Setting new flee destination");
-                _agent.SetDestination(transform.position + dirtoplayer); 
+                var _possibleDestination = _player.transform.position + getRandomWorldPosition(_settings._fleeRadius);
+                _agent.SetDestination(_possibleDestination); 
             }
         }
     }
@@ -89,6 +89,7 @@ public class AIManager : MonoBehaviour
     {
         Gizmos.DrawWireSphere(transform.position, _settings._wanderRadius);
         
+
     }
 }
 
