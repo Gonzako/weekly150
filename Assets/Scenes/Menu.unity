@@ -8380,6 +8380,14 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1974606652, guid: b3989ca4640df4c4f9616f06849e3d5d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1974606654, guid: b3989ca4640df4c4f9616f06849e3d5d, type: 3}
+      propertyPath: orthographic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2087080432, guid: b3989ca4640df4c4f9616f06849e3d5d, type: 3}
       propertyPath: m_Enabled
       value: 0

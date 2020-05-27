@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using FMODUnity;
 public class EatHandler : MonoBehaviour
 {
 
@@ -9,6 +9,8 @@ public class EatHandler : MonoBehaviour
     [SerializeField] private Transform _eatPosition;
     [SerializeField] private float _eatRadius;
     [SerializeField] private LayerMask _eatable;
+
+    [SerializeField] private StudioEventEmitter _emitter;
 
     // Update is called once per frame
     void Update()
@@ -19,6 +21,8 @@ public class EatHandler : MonoBehaviour
             if(eatableTargets.Length > 0)
             {
                 eatableTargets[0].GetComponent<IEatable>().Kill();
+                _emitter.Play();
+                
             }
         }
     }

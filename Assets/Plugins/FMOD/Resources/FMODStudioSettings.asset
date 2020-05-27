@@ -78,6 +78,9 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master
-  Banks: []
+  Banks:
+  - Ambient
+  - Foley
+  - Gameplay
   BanksToLoad: []
   LiveUpdatePort: 9264
