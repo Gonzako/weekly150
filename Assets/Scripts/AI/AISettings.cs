@@ -28,7 +28,7 @@ public class AISettings
     [SerializeField] public float _fleeMovementCycle = 3F;
     [Tooltip("How far can AI decide to wander of after every cycle?")]
     [Range(0.0F, 200F)]
-    [SerializeField] public float _fleeRadius = 10F;
+    [SerializeField] public float _fleeRadius = 30F;
 
 
 }

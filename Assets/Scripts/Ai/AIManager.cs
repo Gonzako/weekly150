@@ -54,11 +54,11 @@ public class AIManager : MonoBehaviour
         {
             
             yield return new WaitForSeconds(_settings._fleeMovementCycle);
-            if (_agent.pathStatus == NavMeshPathStatus.PathComplete && _agent.velocity.magnitude == 0)
+            if (_agent.pathStatus == NavMeshPathStatus.PathComplete)
             {
+                Vector3 dirtoplayer = transform.position - _player.transform.position;
                 Debug.Log("[AIMANAGER] (" + transform.name + "): Setting new flee destination");
-                var _possibleDestination = _player.transform.position + getRandomWorldPosition(_settings._fleeRadius);
-                _agent.SetDestination(_possibleDestination); 
+                _agent.SetDestination(transform.position + dirtoplayer); 
             }
         }
     }
