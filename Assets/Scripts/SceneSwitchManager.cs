@@ -38,4 +38,9 @@ public class SceneSwitchManager : MonoBehaviour
     {
         return (SceneManager.GetActiveScene().buildIndex == SceneManager.sceneCount);
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

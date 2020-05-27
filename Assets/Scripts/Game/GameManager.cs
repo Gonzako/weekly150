@@ -43,12 +43,18 @@ public class GameManager : MonoBehaviour
         }
         if(_eatableCivs.Value == 0F)
         {
-            onLevelComplete.Raise();
-            _canMove.Value = false;
-            _cursorEnabled.Value = true;
+           
             if (SceneSwitchManager._instance.isLastLevel())
             {
                 onGameComplete.Raise();
+                _canMove.Value = false;
+                _cursorEnabled.Value = true;
+            }
+            else
+            {
+                onLevelComplete.Raise();
+                _canMove.Value = false;
+                _cursorEnabled.Value = true;
             }
         }
     }

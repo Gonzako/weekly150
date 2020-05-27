@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -696,8 +696,8 @@ MonoBehaviour:
       GameEvents: []
       SoundData:
         SoundSource: 0
-        DatabaseName: General
-        SoundName: No Sound
+        DatabaseName: Example Slides
+        SoundName: Camera Shot
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     OnStart:
@@ -4702,7 +4702,7 @@ MonoBehaviour:
         Duration: 1
       Scale:
         AnimationType: 2
-        Enabled: 1
+        Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
         By: {x: 0, y: 0, z: 0}
@@ -5033,8 +5033,8 @@ MonoBehaviour:
       GameEvents: []
       SoundData:
         SoundSource: 0
-        DatabaseName: General
-        SoundName: No Sound
+        DatabaseName: Example Slides
+        SoundName: Camera Shot
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     OnStart:
@@ -6257,8 +6257,8 @@ MonoBehaviour:
       GameEvents: []
       SoundData:
         SoundSource: 0
-        DatabaseName: General
-        SoundName: No Sound
+        DatabaseName: Example Clicks
+        SoundName: Button Blip
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Uncategorized
@@ -10784,8 +10784,8 @@ MonoBehaviour:
       GameEvents: []
       SoundData:
         SoundSource: 0
-        DatabaseName: General
-        SoundName: No Sound
+        DatabaseName: Example Clicks
+        SoundName: Button Blip
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Uncategorized
@@ -12311,10 +12311,10 @@ RectTransform:
   m_Father: {fileID: 554629205}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 568.5, y: 514}
+  m_SizeDelta: {x: 568.5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1253435636
 MonoBehaviour:
@@ -13072,7 +13072,7 @@ MonoBehaviour:
     ButtonAnimationType: 0
     DeselectButton: 0
     DisableInterval: 0.4
-    Enabled: 0
+    Enabled: 1
     LoadSelectedPresetAtRuntime: 0
     OnTrigger:
       AnimatorEvents: []
@@ -13090,8 +13090,8 @@ MonoBehaviour:
       GameEvents: []
       SoundData:
         SoundSource: 0
-        DatabaseName: General
-        SoundName: No Sound
+        DatabaseName: Example Clicks
+        SoundName: Typical Click Clack
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Uncategorized
@@ -13150,8 +13150,8 @@ MonoBehaviour:
         To: {x: 0, y: 0, z: 0}
         By: {x: 0.5, y: 0.5, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 0
+        Elasticity: 0
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
@@ -15691,8 +15691,8 @@ MonoBehaviour:
       GameEvents: []
       SoundData:
         SoundSource: 0
-        DatabaseName: General
-        SoundName: No Sound
+        DatabaseName: Example Clicks
+        SoundName: Typical Click Clack
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Uncategorized
@@ -15751,8 +15751,8 @@ MonoBehaviour:
         To: {x: 0, y: 0, z: 0}
         By: {x: 0.5, y: 0.5, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 0
+        Elasticity: 0
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
@@ -16515,12 +16515,23 @@ MonoBehaviour:
         CustomSortingLayer: Default
       Event:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 554629207}
+            m_MethodName: ExitGame
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       GameEvents: []
       SoundData:
         SoundSource: 0
-        DatabaseName: General
-        SoundName: No Sound
+        DatabaseName: Example Clicks
+        SoundName: Clack
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Uncategorized
@@ -17920,7 +17931,7 @@ MonoBehaviour:
           m_RotationOrder: 4
         StartDelay: 0
         Duration: 1
-    Enabled: 1
+    Enabled: 0
     IsPlaying: 0
     LoopAnimationType: 1
     LoadSelectedPresetAtRuntime: 0
@@ -19716,8 +19727,8 @@ MonoBehaviour:
       GameEvents: []
       SoundData:
         SoundSource: 0
-        DatabaseName: General
-        SoundName: No Sound
+        DatabaseName: Example Clicks
+        SoundName: Button Blip
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Uncategorized
@@ -21469,8 +21480,8 @@ MonoBehaviour:
       GameEvents: []
       SoundData:
         SoundSource: 0
-        DatabaseName: General
-        SoundName: No Sound
+        DatabaseName: Example Clicks
+        SoundName: Typical Click Clack
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Uncategorized
@@ -21529,8 +21540,8 @@ MonoBehaviour:
         To: {x: 0, y: 0, z: 0}
         By: {x: 0.5, y: 0.5, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 0
+        Elasticity: 0
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
@@ -22308,8 +22319,8 @@ MonoBehaviour:
       GameEvents: []
       SoundData:
         SoundSource: 0
-        DatabaseName: General
-        SoundName: No Sound
+        DatabaseName: Example Clicks
+        SoundName: Clack
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Uncategorized
@@ -23709,7 +23720,7 @@ MonoBehaviour:
           m_RotationOrder: 4
         StartDelay: 0
         Duration: 1
-    Enabled: 1
+    Enabled: 0
     IsPlaying: 0
     LoopAnimationType: 1
     LoadSelectedPresetAtRuntime: 0
@@ -23905,8 +23916,8 @@ MonoBehaviour:
       GameEvents: []
       SoundData:
         SoundSource: 0
-        DatabaseName: General
-        SoundName: No Sound
+        DatabaseName: Example Clicks
+        SoundName: Typical Click Clack
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Uncategorized
@@ -24744,8 +24755,8 @@ MonoBehaviour:
       GameEvents: []
       SoundData:
         SoundSource: 0
-        DatabaseName: General
-        SoundName: No Sound
+        DatabaseName: Example Clicks
+        SoundName: Clack
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Uncategorized
@@ -28900,8 +28911,8 @@ MonoBehaviour:
       GameEvents: []
       SoundData:
         SoundSource: 0
-        DatabaseName: General
-        SoundName: No Sound
+        DatabaseName: Example Slides
+        SoundName: Camera Shot
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     OnStart:
@@ -30560,8 +30571,8 @@ MonoBehaviour:
       GameEvents: []
       SoundData:
         SoundSource: 0
-        DatabaseName: General
-        SoundName: No Sound
+        DatabaseName: Example Clicks
+        SoundName: Tick
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
     PresetCategory: Uncategorized
@@ -32105,7 +32116,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Idea of the game is to chase around guys who might look like these fellas.
+  m_text: Chase these guys
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -32150,7 +32161,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 45
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -32174,12 +32185,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1995474430}
-    characterCount: 74
+    characterCount: 16
     spriteCount: 0
-    spaceCount: 14
-    wordCount: 15
+    spaceCount: 2
+    wordCount: 3
     linkCount: 0
-    lineCount: 2
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0

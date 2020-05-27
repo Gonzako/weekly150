@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -409,7 +409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 692811312, guid: b3989ca4640df4c4f9616f06849e3d5d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.037739415
+      value: -0.03773941
       objectReference: {fileID: 0}
     - target: {fileID: 692811312, guid: b3989ca4640df4c4f9616f06849e3d5d, type: 3}
       propertyPath: m_LocalRotation.y
@@ -417,7 +417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 692811312, guid: b3989ca4640df4c4f9616f06849e3d5d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0018091308
+      value: 0.0018091305
       objectReference: {fileID: 0}
     - target: {fileID: 871412136, guid: b3989ca4640df4c4f9616f06849e3d5d, type: 3}
       propertyPath: ShowBehavior.OnStart.GameEvents.Array.size
@@ -479,6 +479,14 @@ PrefabInstance:
       propertyPath: OnClick.OnTrigger.Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2052898866}
+    - target: {fileID: 1754061908, guid: b3989ca4640df4c4f9616f06849e3d5d, type: 3}
+      propertyPath: ViewCategory
+      value: GameplayUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 1754061908, guid: b3989ca4640df4c4f9616f06849e3d5d, type: 3}
+      propertyPath: ViewName
+      value: Credits
+      objectReference: {fileID: 0}
     - target: {fileID: 1910450529, guid: b3989ca4640df4c4f9616f06849e3d5d, type: 3}
       propertyPath: _response.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -582,22 +590,22 @@ PrefabInstance:
     - target: {fileID: 2271972350766447452, guid: b3989ca4640df4c4f9616f06849e3d5d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.047836997
+      value: 0.047836993
       objectReference: {fileID: 0}
     - target: {fileID: 2271972350766447452, guid: b3989ca4640df4c4f9616f06849e3d5d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0020860825
+      value: 0.0020860783
       objectReference: {fileID: 0}
     - target: {fileID: 2271972351220192834, guid: b3989ca4640df4c4f9616f06849e3d5d,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.019436559
+      value: -0.019436557
       objectReference: {fileID: 0}
     - target: {fileID: 2271972351220192834, guid: b3989ca4640df4c4f9616f06849e3d5d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.00093192176
+      value: 0.00093192165
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 105924023, guid: b3989ca4640df4c4f9616f06849e3d5d, type: 3}
