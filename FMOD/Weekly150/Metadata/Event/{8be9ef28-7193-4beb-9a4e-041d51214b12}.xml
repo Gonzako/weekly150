@@ -5,7 +5,7 @@
 			<value>Eat Enemy</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{f47585d9-9a2d-496d-be60-cce1c333354b}</destination>
@@ -113,7 +113,6 @@
 	<object class="MixerBusEffectChain" id="{5f855a5c-2875-4b1f-b849-ad109a0669e9}">
 		<relationship name="effects">
 			<destination>{44ddb412-68dd-49e9-9bdb-40c75aa1a0e2}</destination>
-			<destination>{67a96b48-3f51-4d2f-bae6-91c3e1269c35}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{23a2e476-9e9d-4f54-b9de-3b0307c3fd27}" />
@@ -125,13 +124,5 @@
 	</object>
 	<object class="MixerBusPanner" id="{3d642f02-454c-4b82-8e27-ba2a1392eead}" />
 	<object class="MixerBusFader" id="{44ddb412-68dd-49e9-9bdb-40c75aa1a0e2}" />
-	<object class="SpatialiserEffect" id="{67a96b48-3f51-4d2f-bae6-91c3e1269c35}">
-		<property name="minimumDistance">
-			<value>0</value>
-		</property>
-		<property name="maximumDistance">
-			<value>35</value>
-		</property>
-	</object>
 	<object class="MixerBusFader" id="{14f52d78-0e70-4073-a1b0-ba2238f440da}" />
 </objects>

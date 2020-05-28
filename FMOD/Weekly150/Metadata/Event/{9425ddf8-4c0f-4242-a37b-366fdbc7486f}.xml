@@ -5,7 +5,7 @@
 			<value>Ghost Flying</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{f47585d9-9a2d-496d-be60-cce1c333354b}</destination>
@@ -161,7 +161,6 @@
 	<object class="MixerBusEffectChain" id="{8538822a-9697-4eb3-9316-d4575c677b90}">
 		<relationship name="effects">
 			<destination>{9f373485-0a5b-49e2-b170-59e52e0a6f5f}</destination>
-			<destination>{c5d9dc69-d182-4adc-84fb-fbc8106e6504}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{dfb42cc8-06c1-44b9-9628-2c1ffa5889ee}" />
@@ -182,11 +181,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{b2c7f185-a620-4e27-b908-cb5a9c883535}" />
 	<object class="MixerBusFader" id="{9f373485-0a5b-49e2-b170-59e52e0a6f5f}" />
-	<object class="SpatialiserEffect" id="{c5d9dc69-d182-4adc-84fb-fbc8106e6504}">
-		<property name="minimumDistance">
-			<value>0</value>
-		</property>
-	</object>
 	<object class="AutomationCurve" id="{68b5645e-6c70-479a-887f-f351cc939a42}">
 		<relationship name="parameter">
 			<destination>{03754d73-798a-45a5-928d-4a21d4cc545a}</destination>
